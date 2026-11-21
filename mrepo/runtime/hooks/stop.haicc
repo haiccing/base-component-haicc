@@ -2,4 +2,3 @@
 protocol/deactivate . boot
 protocol/deactivate . container
 protocol/deactivate . crud
-protocol/deactivate . swarm

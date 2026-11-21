@@ -2,4 +2,3 @@
 protocol/activate . boot
 protocol/activate . container
 protocol/activate . crud
-protocol/activate . swarm
