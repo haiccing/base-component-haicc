@@ -9,16 +9,7 @@ swarm node's name: `swarm-1/node-1`.
 
 ## Steps
 
-```sh
-# the swarm: a node in the host's main, its document saying it is one
-haicc host crud/create swarms/swarm-1 '{"kind":"swarm"}'
-# the node: an mrepo of its own, built from the haicc component; its
-# commission, run by its runtime as it starts, brings it into service
-# (made ready, its info extracted; its door opened) before the deploy answers
-haicc host boot/deploy swarms/swarm-1/node-1 haiccing/base-component-haicc
-# the check: the node answers with its root
-haicc host haicc swarms/swarm-1/node-1 crud/read .
-```
+The script, [steps.haicc](steps.haicc): each line as typed after `haicc`, what it answers under it; run with `howto/run`, shown here at info extraction.
 
 ## Then
 

@@ -11,19 +11,7 @@ read. Docker is needed; the containers are left running.
 
 ## Steps
 
-```sh
-# the host, in service by its commission
-haicc . boot/deploy host haiccing/base-component-haicc
-# its cluster: every command of the script done in turn, at the host
-haicc . haicc/script host < haiccing/base-component-haicc/scripts/cluster.haicc
-# the swarm's nodes, and one node's container
-haicc host crud/read "swarms/swarm-1/*"
-haicc host haicc swarms/swarm-1/node-1 container/status
-# taken down: each replica removed before its node, then the host
-haicc host haicc swarms/swarm-1/node-1 container/remove
-haicc host haicc swarms/swarm-1/node-2 container/remove
-haicc . boot/teardown host
-```
+The script, [steps.haicc](steps.haicc): each line as typed after `haicc`, what it answers under it; run with `howto/run`, shown here at info extraction.
 
 ## Notes
 

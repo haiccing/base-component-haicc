@@ -8,17 +8,7 @@ in a container.
 
 ## Steps
 
-```sh
-# the replica made, and the container that will run it
-haicc host haicc swarms/swarm-1/node-1 container/create
-# the container started: the replica's runtime runs in it, its commission
-# bringing it into service (once: a restart of its container does not again)
-haicc host haicc swarms/swarm-1/node-1 container/start
-# the replica answers, reached through its node
-haicc host haicc swarms/swarm-1/node-1 haicc container crud/read .
-# the check: the node says its container runs
-haicc host haicc swarms/swarm-1/node-1 container/status
-```
+The script, [steps.haicc](steps.haicc): each line as typed after `haicc`, what it answers under it; run with `howto/run`, shown here at info extraction.
 
 ## After
 

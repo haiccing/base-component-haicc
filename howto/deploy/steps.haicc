@@ -1,0 +1,11 @@
+# scene: the host, in service by its commission
+. boot/deploy host haiccing/base-component-haicc
+# step: the swarm: a node in the host's main, its document saying it is one
+host crud/create swarms/swarm-1 '{"kind":"swarm"}'
+# expect: "value":{"kind":"swarm"}
+# step: the node: an mrepo of its own, built from the haicc component; its commission brings it into service before the deploy answers
+host boot/deploy swarms/swarm-1/node-1 haiccing/base-component-haicc
+# expect: "mrepo":"swarm-1/node-1"
+# step: the check: the node answers with its root
+host haicc swarms/swarm-1/node-1 crud/read .
+# expect: "uri":["main","."]
